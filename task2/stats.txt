@@ -1,0 +1,111 @@
+records 40000000
+
+window 1 (37 patterns)
+ 25.94%   10377222 add <- add
+ 18.25%    7299072 call <- add
+ 12.60%    5038900 add <- shl
+ 12.05%    4819295 br <- icmp
+ 12.05%    4819265 icmp <- add
+  2.71%    1085497 load <- getelementptr
+  2.28%     913496 getelementptr <- getelementptr
+  2.28%     912644 getelementptr <- add
+  1.73%     691555 add <- load
+  1.66%     663552 call <- mul
+  1.11%     442368 shl <- call
+  1.11%     442368 call <- trunc
+  0.86%     345702 sdiv <- add
+  0.86%     345702 add <- sdiv
+  0.56%     222201 trunc <- add
+  0.55%     221184 sdiv <- load
+  0.55%     221184 mul <- sdiv
+  0.55%     221184 call <- call
+  0.55%     221184 add <- call
+  0.43%     173318 store <- getelementptr
+
+window 2 (93 patterns)
+ 12.17%    4866048 add <- add ; add <- shl
+ 12.05%    4819265 icmp <- add ; br <- icmp
+ 12.05%    4819265 add <- add ; icmp <- add
+ 11.49%    4597240 br <- icmp ; add <- add
+  9.40%    3760128 call <- add ; add <- add
+  8.85%    3538944 call <- add ; call <- add
+  8.85%    3538944 add <- shl ; call <- add
+  2.76%    1105920 add <- shl ; add <- add
+  1.85%     739781 getelementptr <- add ; load <- getelementptr
+  1.42%     566887 getelementptr <- getelementptr ; getelementptr <- add
+  1.30%     518616 add <- add ; add <- load
+  1.30%     518562 load <- getelementptr ; add <- add
+  1.30%     518554 add <- load ; getelementptr <- getelementptr
+  0.86%     345702 getelementptr <- getelementptr ; load <- getelementptr
+  0.55%     221184 trunc <- add ; call <- trunc
+  0.55%     221184 shl <- call ; shl <- call
+  0.55%     221184 shl <- call ; add <- call
+  0.55%     221184 sdiv <- load ; mul <- sdiv
+  0.55%     221184 mul <- sdiv ; call <- mul
+  0.55%     221184 load <- getelementptr ; sdiv <- load
+
+window 3 (131 patterns)
+ 12.05%    4819265 add <- add ; icmp <- add ; br <- icmp
+ 11.49%    4597233 icmp <- add ; br <- icmp ; add <- add
+  8.85%    3538944 call <- add ; call <- add ; add <- add
+  8.85%    3538944 call <- add ; add <- add ; icmp <- add
+  8.85%    3538944 add <- shl ; call <- add ; call <- add
+  8.85%    3538944 add <- add ; add <- shl ; call <- add
+  8.29%    3317760 br <- icmp ; add <- add ; add <- shl
+  2.77%    1107027 br <- icmp ; add <- add ; icmp <- add
+  2.76%    1105920 add <- shl ; add <- add ; add <- shl
+  2.76%    1105920 add <- add ; add <- shl ; add <- add
+  1.42%     566887 getelementptr <- getelementptr ; getelementptr <- add ; load <- getelementptr
+  1.30%     518562 load <- getelementptr ; add <- add ; add <- load
+  0.86%     345702 getelementptr <- getelementptr ; load <- getelementptr ; add <- add
+  0.86%     345702 add <- load ; getelementptr <- getelementptr ; load <- getelementptr
+  0.86%     345702 add <- add ; add <- load ; getelementptr <- getelementptr
+  0.55%     221184 trunc <- add ; call <- trunc ; call <- trunc
+  0.55%     221184 shl <- call ; shl <- call ; add <- call
+  0.55%     221184 shl <- call ; add <- call ; add <- add
+  0.55%     221184 sdiv <- load ; mul <- sdiv ; call <- mul
+  0.55%     221184 mul <- sdiv ; call <- mul ; call <- mul
+
+window 4 (159 patterns)
+ 11.49%    4597233 add <- add ; icmp <- add ; br <- icmp ; add <- add
+  8.85%    3538944 call <- add ; call <- add ; add <- add ; icmp <- add
+  8.85%    3538944 call <- add ; add <- add ; icmp <- add ; br <- icmp
+  8.85%    3538944 add <- shl ; call <- add ; call <- add ; add <- add
+  8.85%    3538944 add <- add ; add <- shl ; call <- add ; call <- add
+  8.29%    3317760 icmp <- add ; br <- icmp ; add <- add ; add <- shl
+  6.64%    2654208 br <- icmp ; add <- add ; add <- shl ; call <- add
+  2.77%    1107027 br <- icmp ; add <- add ; icmp <- add ; br <- icmp
+  2.77%    1107020 icmp <- add ; br <- icmp ; add <- add ; icmp <- add
+  2.76%    1105920 add <- add ; add <- shl ; add <- add ; add <- shl
+  2.21%     884736 add <- shl ; add <- add ; add <- shl ; call <- add
+  1.66%     663552 br <- icmp ; add <- add ; add <- shl ; add <- add
+  0.86%     345702 load <- getelementptr ; add <- add ; add <- load ; getelementptr <- getelementptr
+  0.86%     345702 getelementptr <- getelementptr ; load <- getelementptr ; add <- add ; add <- load
+  0.86%     345702 add <- load ; getelementptr <- getelementptr ; load <- getelementptr ; add <- add
+  0.86%     345702 add <- add ; add <- load ; getelementptr <- getelementptr ; load <- getelementptr
+  0.55%     221184 trunc <- add ; call <- trunc ; call <- trunc ; call <- add
+  0.55%     221184 shl <- call ; shl <- call ; add <- call ; add <- add
+  0.55%     221184 shl <- call ; add <- call ; add <- add ; add <- shl
+  0.55%     221184 sdiv <- load ; mul <- sdiv ; call <- mul ; call <- mul
+
+window 5 (184 patterns)
+  8.85%    3538944 call <- add ; call <- add ; add <- add ; icmp <- add ; br <- icmp
+  8.85%    3538944 call <- add ; add <- add ; icmp <- add ; br <- icmp ; add <- add
+  8.85%    3538944 add <- shl ; call <- add ; call <- add ; add <- add ; icmp <- add
+  8.85%    3538944 add <- add ; add <- shl ; call <- add ; call <- add ; add <- add
+  8.29%    3317760 add <- add ; icmp <- add ; br <- icmp ; add <- add ; add <- shl
+  6.64%    2654208 icmp <- add ; br <- icmp ; add <- add ; add <- shl ; call <- add
+  6.64%    2654208 br <- icmp ; add <- add ; add <- shl ; call <- add ; call <- add
+  2.77%    1107020 icmp <- add ; br <- icmp ; add <- add ; icmp <- add ; br <- icmp
+  2.77%    1107020 add <- add ; icmp <- add ; br <- icmp ; add <- add ; icmp <- add
+  2.21%     885375 br <- icmp ; add <- add ; icmp <- add ; br <- icmp ; add <- add
+  2.21%     884736 add <- shl ; add <- add ; add <- shl ; call <- add ; call <- add
+  2.21%     884736 add <- add ; add <- shl ; add <- add ; add <- shl ; call <- add
+  1.66%     663552 icmp <- add ; br <- icmp ; add <- add ; add <- shl ; add <- add
+  1.66%     663552 br <- icmp ; add <- add ; add <- shl ; add <- add ; add <- shl
+  0.86%     345702 load <- getelementptr ; add <- add ; add <- load ; getelementptr <- getelementptr ; load <- getelementptr
+  0.86%     345702 add <- load ; getelementptr <- getelementptr ; load <- getelementptr ; add <- add ; add <- load
+  0.86%     345702 add <- add ; add <- load ; getelementptr <- getelementptr ; load <- getelementptr ; add <- add
+  0.55%     221184 trunc <- add ; call <- trunc ; call <- trunc ; call <- add ; add <- add
+  0.55%     221184 shl <- call ; shl <- call ; add <- call ; add <- add ; add <- shl
+  0.55%     221184 shl <- call ; add <- call ; add <- add ; add <- shl ; add <- add
